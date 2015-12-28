@@ -16,7 +16,7 @@ public class TwoSum {
             }
             markMap.put(nums[i],i);
         }
-
+        //if not found
         return notFoundResult;
     }
 
