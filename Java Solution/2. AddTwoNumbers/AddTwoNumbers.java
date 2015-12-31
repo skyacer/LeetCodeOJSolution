@@ -18,7 +18,6 @@ public class AddTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         return null;
     }
-
     public static ListNode reverseList(ListNode head){
         if(head == null || head.next==null){
             return head;
@@ -41,8 +40,10 @@ public class AddTwoNumbers {
         ListNode b = new ListNode(2);
         ListNode c = new ListNode(3);
 
+
         a.next = b;
         b.next = c;
+
 
         ListNode cur = a;
 
@@ -53,14 +54,12 @@ public class AddTwoNumbers {
 
         ListNode reverse = reverseList(a);
 
-
         ListNode reverseCur = reverse;
 
         while(reverseCur!= null){
             System.out.println(reverseCur.val);
             reverseCur = reverseCur.next;
         }
-
 
     }
 
