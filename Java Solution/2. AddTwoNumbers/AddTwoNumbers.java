@@ -15,50 +15,52 @@ import Util.ListNode;
  * Created by Wayne on 15/12/29.
  */
 public class AddTwoNumbers {
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        return null;
+    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        return count(l1,l2,0);
     }
-    public static ListNode reverseList(ListNode head){
-        if(head == null || head.next==null){
-            return head;
-        }
 
-        ListNode cur = head;
-        ListNode reverse = null;
 
-        while(cur!= null){
-            ListNode next = cur.next;
-            cur.next = reverse;
-            reverse = cur;
-            cur = next;
-        }
-        return reverse;
-    }
+   public static ListNode count(ListNode l1,ListNode l2,int isCarry){
+       if (l1==null && l2==null && isCarry==0){
+           return null;
+       }
+       int sum = 0;
+       sum = isCarry + (l1==null?0:l1.val) +  (l2==null?0:l2.val);
+
+       if (sum >= 10){
+           isCarry = 1;
+           sum = sum - 10;
+       }else {
+           isCarry = 0;
+       }
+
+       ListNode tmp = new ListNode(sum);
+       tmp.next = count(l1==null?null:l1.next,l2==null?null:l2.next,isCarry);
+
+       return tmp;
+   }
 
     public static void main(String[] args){
-        ListNode a = new ListNode(1);
-        ListNode b = new ListNode(2);
+        ListNode a = new ListNode(8);
+        ListNode b = new ListNode(4);
         ListNode c = new ListNode(3);
 
+        ListNode d = new ListNode(5);
+        ListNode e = new ListNode(6);
+        ListNode f = new ListNode(7);
 
         a.next = b;
         b.next = c;
 
+        d.next = e;
+        e.next = f;
 
-        ListNode cur = a;
+        ListNode out = addTwoNumbers(a,d);
 
-        while (cur!=null){
-            System.out.println(cur.val);
-            cur = cur.next;
-        }
 
-        ListNode reverse = reverseList(a);
-
-        ListNode reverseCur = reverse;
-
-        while(reverseCur!= null){
-            System.out.println(reverseCur.val);
-            reverseCur = reverseCur.next;
+        while (out!=null){
+            System.out.println(out.val);
+            out = out.next;
         }
 
     }
