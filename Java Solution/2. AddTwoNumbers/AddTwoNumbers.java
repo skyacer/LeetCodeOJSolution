@@ -51,7 +51,6 @@ public class AddTwoNumbers {
 
         a.next = b;
         b.next = c;
-
         d.next = e;
         e.next = f;
 
