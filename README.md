@@ -1,5 +1,5 @@
 # LeetCodeOJSolution
-This is the solution of the LeetCode,which is constitute of java and c plus plus.
+This is the solution of the LeetCode,which is constitute of java.
 
 # What is LeetCode?
 you can see [LeetCode](https://leetcode.com/problemset/algorithms/)
