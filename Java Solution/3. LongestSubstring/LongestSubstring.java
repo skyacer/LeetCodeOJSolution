@@ -1,10 +1,19 @@
 package LongestSubstring;
 
 /**
- * Created by Wayne on 16/1/6.
+ * Created by Administrator on 2016/1/9 0009.
  */
 public class LongestSubstring {
     public int lengthOfLongestSubstring(String s) {
-        return 0;
+        if(s.length()<2){
+            return s.length();
+        }
+        char[] counters = new char[128];
+        char[] stringArray = s.toCharArray();
+
+        int max=0,count=0,tail=0;
+
+        return max;
     }
+
 }
