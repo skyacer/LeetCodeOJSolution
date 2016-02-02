@@ -12,7 +12,6 @@ public class LongestPalindrome {
         int left = 0;
         int right = 0;
         int max = 0;
-
         for(int i = 0;i<len;i++)
             for(int j = 0;j<=i;j++){
                 if(s.charAt(i)==s.charAt(j) && (i-j<=2||dp[i-1][j+1]))
