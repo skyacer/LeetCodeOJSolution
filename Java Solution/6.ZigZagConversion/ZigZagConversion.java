@@ -4,7 +4,9 @@
 public class ZigZagConversion {
     public static String convert(String s, int numRows) {
         char[] sArray = s.toCharArray();
+
         int length = s.length();
+
         StringBuffer[] record = new StringBuffer[numRows];
 
         for(int i=0;i<numRows;i++) record[i] = new StringBuffer();
